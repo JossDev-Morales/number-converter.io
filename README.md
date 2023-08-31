@@ -12,4 +12,4 @@
 ## Description
 
 Converter of decimal and integer numbers in different bases such as octal, binary, hexadecimal and decimal and bases 
-between 2 and 36 to other number bases, puedes convertir desde numeros grandes en formato decimal (ints.decimals) hasta numeros grandes negativos, los numeros decimales en otras bases se convertiran en el mismo formato decimal, es decir ("ints" en otra base."decimals" en otra base), lo mismo con numeros negativos usando un signo negativo para numeros negativos, en los numeros positivos se elimina el signo, ejemplo en binario: `-1010.0101` que da como resultado a una base decimal `-10.5`
+between 2 and 36 to other number bases, puedes convertir desde numeros grandes en formato decimal `ints`.`decimals` hasta numeros grandes negativos, los numeros decimales en otras bases se convertiran en el mismo formato decimal, es decir (`ints` en otra base.`decimals `en otra base), lo mismo con numeros negativos usando un signo negativo para numeros negativos, en los numeros positivos se elimina el signo, ejemplo en binario: `-1010.0101` que da como resultado a una base decimal `-10.5`.
