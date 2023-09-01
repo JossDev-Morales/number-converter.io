@@ -51,8 +51,8 @@ To use the class `you must initialize it using the constructor and the reserved 
 ### Constructor
 
 **parameters**
--`number` A number representation in some numeric base, under the rules for the bases
--`base` A numeric base betwen 2 and 36
+- `number` A number representation in some numeric base, under the rules for the bases
+- `base` A numeric base betwen 2 and 36
 
 **What returns**
 The instance of the `converter` class, that is to say the constructed object.
@@ -94,7 +94,7 @@ The number as a `String` in hexadecimal base
 This method converts the number of the `convert` to a custom base, under the rules for the bases
 
 **parameters**
--`base` **String** The custom base to convert
+- `base` **String** The custom base to convert
 
 **what returns**
 The number as a `String` in a custom base
@@ -125,8 +125,8 @@ This tool converts digit by digit to its equivalent in decimal, it uses a conver
 ((B=11)x(16^⁰=0)=11)+((A=10)x(16^¹=16)=160)=`171`
 
 **parameters**
--`number` **String** The number representation without "." and sign
--`radix` **String** The base of the number representation
+- `number` **String** The number representation without "." and sign
+- `radix` **String** The base of the number representation
 
 **What returns**
 The number representation as a `String` in a decimal base or base `10`
@@ -136,8 +136,8 @@ The number representation as a `String` in a decimal base or base `10`
 This tool is simpler than its `baseToDecimal` counterpart, since it is usually easier to work with decimal numbers and it is easier to find a number in decimal format than in another base, you will only have to pass the decimal number, without NaN characters, since these are not converted and will result in an error, you will also have to pass the base to which you want to convert the decimal number and you will get the representation of the number in the base you used.
 
 **parameters**
--`decimal` **String** The number representation without NaN characters
--`radix` **String** The base to convert, betwen 2 and 36
+- `decimal` **String** The number representation without NaN characters
+- `radix` **String** The base to convert, betwen 2 and 36
 
 **What returns**
 The number representation as a `String` in a custom base betwen 2 and 36
