@@ -100,12 +100,34 @@ function sanitizer(number, radix) {
     }
   } else if (base === 'decimal' || base === '10') {
     if (number[0] === '-') {
+      if (number[1] === '0' && number[2] === 'd' || number[1] === '0' && number[2] === 'D') {
+        const decimal = number[2] === 'd' ? number.split('d') : number.split('D');
+        return {
+          base: '10',
+          sign: decimal[0][0],
+          number: {
+            ints: decimal[1].slice(1).split('.')[0],
+            decimals: decimal[1].slice(1).split('.')[1]
+          }
+        };
+      } else {
+        return {
+          base: '10',
+          sign: number[0],
+          number: {
+            ints: number.slice(1).split('.')[0],
+            decimals: number.slice(1).split('.')[1]
+          }
+        };
+      }
+    } else if (number[0] === '0' && number[1] === 'd' || number[0] === '0' && number[1] === 'D') {
+      const decimal = number[1] === 'd' ? number.split('d') : number.split('D');
       return {
         base: '10',
-        sign: number[0],
+        sign: '+',
         number: {
-          ints: number.slice(1).split('.')[0],
-          decimals: number.slice(1).split('.')[1]
+          ints: decimal[1].split('.')[0],
+          decimals: decimal[1].split('.')[1]
         }
       };
     } else {
