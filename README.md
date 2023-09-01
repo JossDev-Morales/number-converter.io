@@ -43,7 +43,7 @@ This allows you to convert from any base to any base, mixing both tools.
 
 ## Usage
 
-To use the class `you must initialize it using the constructor and the reserved word "new"
+To use the class you must initialize it using the constructor and the reserved word `new`
 
 ```js
     const largeNumber = new converter('0b011101011101010111010110101','2')
@@ -51,7 +51,7 @@ To use the class `you must initialize it using the constructor and the reserved 
 ### Constructor
 
 **parameters**
-- `number` A number representation in some numeric base, under the rules for the bases
+- `number` A number representation in some numeric base, under the [rules for the bases](https://github.com/JossDev-Morales/Number-converter.io/blob/main/README.md#number-base-rules)
 - `base` A numeric base betwen 2 and 36
 
 **What returns**
@@ -91,7 +91,7 @@ The number as a `String` in hexadecimal base
 
 #### toCustomBase
 
-This method converts the number of the `convert` to a custom base, under the rules for the bases
+This method converts the number of the `convert` to a custom base, under the [rules for the bases](https://github.com/JossDev-Morales/Number-converter.io/blob/main/README.md#number-base-rules)
 
 **parameters**
 - `base` **String** The custom base to convert
@@ -103,11 +103,11 @@ The number as a `String` in a custom base
 
 This class only has a static method named `fromCustomToCustom`
 
-This static method is used to convert a number into an arbitrary base between `2` and` 36` to another arbitrary base between `2` and` 36`, under the rules for the bases
+This static method is used to convert a number into an arbitrary base between `2` and` 36` to another arbitrary base between `2` and` 36`, under the [rules for the bases](https://github.com/JossDev-Morales/Number-converter.io/blob/main/README.md#number-base-rules)
 
 **parameters**
-- `from` **Objetc** whit `number` like a **String** and `base` like a **String** where `number` is the number representation and `base` is the base of the number representation
-- `to` **String** It is the base that will be used for the conversion
+- `from` **Objetc** whit `number` like a **String** and `base` like a **String** where `number` is the number representation and `base` is the base of the number representation, unde the [rules for the bases](https://github.com/JossDev-Morales/Number-converter.io/blob/main/README.md#number-base-rules)
+- `to` **String** It is the base that will be used for the conversion, under the [rules for the bases](https://github.com/JossDev-Morales/Number-converter.io/blob/main/README.md#number-base-rules)
 
 **what returns**
 The number as `string` in the custom base
@@ -121,7 +121,7 @@ This extra tool allows you to convert from a base to Decimal, the base is not st
 
 This tool works directly under the alternative base rules, since it dynamically receives a base, to convert a number to decimal, the base in which this number was created is needed, in order to convert it correctly, let's go to its behavior specific.
 
-This tool converts digit by digit to its equivalent in decimal, it uses a conversion algorithm where if the digit is NaN (this also contemplates characters like "." and "-", for this reason they should not be used and only pass the string of characters which represents the absolute number), it will be converted to its respective value, starting with "A" at 10 and "z" at 36 (the algorithm will convert all letters to a numerical representation regardless of the base, that is, if the base is 16 but you use a z, the algorithm will convert z to 35 but will do the following operations with the power of 16 not 35 so the value of z won't be properly converted to decimal.), and multiply by the result of the base to a power equivalent to the position of the digit and the results of all the digits will be added, in other words if the first digit is A and the second B and the base is 16, the result would be:
+This tool converts digit by digit to its equivalent in decimal, it uses a conversion algorithm where if the digit is NaN (this also contemplates characters like "." and "-", for this reason they should not be used and only pass the string of characters which represents the absolute number), it will be converted to its respective value, starting with "A" at 10 and "z" at 35 (the algorithm will convert all letters to a numerical representation regardless of the base, that is, if the base is 16 but you use a z, the algorithm will convert z to 35 but will do the following operations with the power of 16 not 35 so the value of z won't be properly converted to decimal.), and multiply by the result of the base to a power equivalent to the position of the digit and the results of all the digits will be added, in other words if the first digit is A and the second B and the base is 16, the result would be:
 ((B=11)x(16^⁰=0)=11)+((A=10)x(16^¹=16)=160)=`171`
 
 **parameters**
