@@ -37,7 +37,7 @@ Here you will see how to start working with the class as soon as possible, later
 This converter works internally with two tools that convert numbers between different bases.
 
 - `baseToDecimal`- Converts from any base between `2` and` 36` to decimal or base `10`
-- `decimalToBase`- Converts from decimal or base `10` to any other base between` 2` and `36`
+- `decimalToBase`- Converts from decimal or base `10` to any other base between `2` and `36`
 
 This allows you to convert from any base to any base, mixing both tools.
 
