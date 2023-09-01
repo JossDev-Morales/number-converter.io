@@ -36,7 +36,7 @@ function baseFinder(number, radix) {
     base = radix;
     if (number[sign] === '0' && isNaN(number[sign + 1])) {
       let mark = number[sign] + number[sign + 1];
-      let InvalidMark = new customError('numberMarkError', "The number base of the number is ".concat(radix, " y ").concat(number[sign] + number[sign + 1], " It is not a valid Mark for this base"), {
+      let InvalidMark = new customError('numberMarkError', "La base numerica del numero es ".concat(radix, " y ").concat(number[sign] + number[sign + 1], " no es una marka valida para esta base"), {
         validMarks: base === 'binary' || base === '2' ? ['0b', '0B'] : base === 'octal' || base === '8' ? ['0o', '0O'] : ['0x', '0X'],
         invalidMark: number[sign] + number[sign + 1]
       });

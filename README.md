@@ -169,12 +169,12 @@ Popular bases have specific markings that identify the base directly in the numb
 - the mark of the base  `2` is `0b` or `0B`
 - the mark of the base  `8` is `0o` or `0O`
 - the mark of the base  `10` is `0d` or `0D`
-- ethe mark of the base  `10` is `0x` or `0X`
+- ethe mark of the base  `16` is `0x` or `0X`
 
 - If you pass a number but not the base corresponding to this number: 
-    - it will try to identify the base of the number, with a unique brand for the most popular bases
+    - it will try to identify the base of the number, with a unique mark for the most popular bases
     - If there is no unique mark on the number, you will receive an error specifying that you must use a mark
-    - If you pass an invalid flag, you will receive an error specifying the valid marks and your invalid mark.
+    - If you pass an invalid mark, you will receive an error specifying the valid marks and your invalid mark.
 - If you pass a number and its corresponding base:
     - You can use a nickname for the base
     - If the base does not correspond to a popular base nickname or a number between 2 and 36, you will receive an error
@@ -188,4 +188,4 @@ It cannot be differentiated between some numbers in different bases, for example
 
 ## License
 
-**Number-converter.io** is [**MIT** licensed][https://github.com/JossDev-Morales/Number-converter.io/blob/main/LICENSE]
+**Number-converter.io** is [**MIT** licensed](https://github.com/JossDev-Morales/Number-converter.io/blob/main/LICENSE)

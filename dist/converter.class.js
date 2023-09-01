@@ -14,16 +14,16 @@ const sanitizer = require("./sanitizer.tool");
 /**
  * @class Converter is a class to parse a number and convert it to other number bases such as Binary, Octal, Decimal, Hexadecimal and custom bases between 2 and 36.
  * @public
- * @see www.github.com
+ * @see https://github.com/JossDev-Morales/Number-converter.io/ Documentation
  */
 var _number = /*#__PURE__*/new WeakMap();
 var _base = /*#__PURE__*/new WeakMap();
 class converter {
   /**
-   * @constructor A converter betwen numeric bases
+   * @constructor A converter betwen numeric bases, under the rules for the bases
    * @param {string} number A number representation in some numeric base
    * @param {("binary"|"octal"|"decimal"|"hexadecimal"|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'|'10'|'11'|'12'|'13'|'14'|'15'|'16'|'17'|'18'|'19'|'20'|'21'|'22'|'23'|'24'|'25'|'26'|'27'|'28'|'29'|'30'|'31'|'32'|'33'|'34'|'35'|'36')} base A numeric base betwen 2 and 36
-   * @see www.github.com
+   * @see https://github.com/JossDev-Morales/Number-converter.io/ Documentation
    */
   constructor(number, base) {
     _classPrivateFieldInitSpec(this, _number, {
@@ -42,7 +42,7 @@ class converter {
   }
   /**
    * @method toBinary This method converts the current number to binary base.
-   * @see www.github.com
+   * @see https://github.com/JossDev-Morales/Number-converter.io/#tobinary
    * @returns {string} The numeric representation in Binary
    */
   toBinary() {
@@ -54,7 +54,7 @@ class converter {
   }
   /**
    * @method toOctal This method converts the current number to octal base.
-   * @see www.github.com
+   * @see https://github.com/JossDev-Morales/Number-converter.io/#tooctal
    * @returns {string} The numeric representation in Octal
    */
   toOctal() {
@@ -66,7 +66,7 @@ class converter {
   }
   /**
    * @method toDecimal This method converts the current number to decimal base.
-   * @see www.github.com
+   * @see https://github.com/JossDev-Morales/Number-converter.io/#todecimal
    * @returns {string} The numeric representation in Decimal
    */
   toDecimal() {
@@ -78,7 +78,7 @@ class converter {
   }
   /**
    * @method toHexadecimal This method converts the current number to hexadecimal base.
-   * @see www.github.com
+   * @see https://github.com/JossDev-Morales/Number-converter.io/#tohexadecimal
    * @returns {string} The numeric representation in Hexadecimal
    */
   toHexadecimal() {
@@ -90,7 +90,7 @@ class converter {
   }
   /**
    * @method toCustomBase This method converts the current number to other base under the rules for the bases, see at www.github.com
-   * @see www.github.com toCustomBase Doc
+   * @see https://github.com/JossDev-Morales/Number-converter.io/#tocustombase toCustomBase Doc
    * @param {string} base The custom base to convert 
    * @returns {string} The numeric representation of the custom base.
    */
@@ -103,7 +103,7 @@ class converter {
   }
   /**
    * @method fromCustomToCustom An static method to convert from a number in some base to other base under the rules for the bases, see at www.github.com
-   * @see www.github.com fromCustomToCustom Doc
+   * @see https://github.com/JossDev-Morales/Number-converter.io/#static-methods fromCustomToCustom Doc
    * @param {{number:string,base:string}} from The representation of an number in a custom base
    * @param {string} to The custom base to convert
    */
