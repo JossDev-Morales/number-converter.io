@@ -6,7 +6,7 @@
 [npm-link]: https://www.npmjs.com/package/number-converter.io
 [downloads]:https://img.shields.io/npm/dt/bignumber.io?style=for-the-badge&logo=npm&color=%23cb0000
 [license-link]:''
-[license-img]:https://img.shields.io/github/license/JossDev-Morales/Number-converter.io
+[license-img]:https://img.shields.io/github/license/JossDev-Morales/Number-converter.io?style=for-the-badge
 [git-img]:https://img.shields.io/badge/Git--hub-161b22?logo=github&style=social
 [git-link]:https://github.com/JossDev-Morales/Number-converter.io
 [discord-img]:https://img.shields.io/badge/Discord-313338?logo=discord&style=social
