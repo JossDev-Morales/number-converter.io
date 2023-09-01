@@ -181,7 +181,8 @@ Popular bases have specific markings that identify the base directly in the numb
     - If you use a mark that does not correspond to the base, you will receive an error specifying it
     - If any anomaly is identified in the number, that is, it does not seem to be a number that corresponds to its base
         - If a binary base is identified and contains characters other than 0 or 1, you will receive an error specifying it
-        - If it is identified that the base is less than 10 and has alphabetical characters, you will receive a specific error
+        - If it is identified that the base is less than 11 and has alphabetical characters, you will receive a specific error
+        - If it is identified that the base is greater than 10 and some weird characters are found, you will recive an error 
         - If it is identified that the number has greater characters than those of its base, you will receive an error, for example base 8 and a number with 9 as 19000 or 8 as 18 since base 8 ranges from 0 to 7.
 
 It cannot be differentiated between some numbers in different bases, for example an octal number and decimal numbers with digits less than 7 or binary that resemble octal or decimal numbers with 0 and 1 such as 101 or 1000, so it is important to specify the base and not leave it to ambiguity.
