@@ -1,6 +1,30 @@
 const customError = require("./customError.error")
 
 function baseChecker(number, radix) {
+    //checker wird characters in bases greater than 10 like 11
+    if (radix>10) {
+        /**@type {string} */
+        const digits = !number.decimals ? number.ints : number.ints + number.decimals
+        if (digits.split('').some(digit=>{
+            if (isNaN(digit)) {
+                if (!['A','B',"C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"].includes(digit)) {
+                    return true
+                }else return false
+            }
+        })) {
+            const invalidCharacter=new customError('invalidCharacter','Your number have some digits that are invalid like "-" or ","',{
+                invalidCharacters:digits.split('').filter(digit=>{
+                    if (isNaN(digit)) {
+                        if (!['A','B',"C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"].includes(digit)) {
+                            return true
+                        }
+                    }
+                })
+            })
+            throw invalidCharacter
+        }
+    }
+    //checker range of bases
     if (!['2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21',
         '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', 'binary', 'octal', 'decimal',
         'hexadecimal'].some(allowedBase => allowedBase === radix)) {
