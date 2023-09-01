@@ -1,7 +1,7 @@
 const customError = require("./customError.error")
 
 function baseChecker(number, radix) {
-    //checker wird characters in bases greater than 10 like 11
+    //checker weird characters in bases greater than 10 like 11
     if (radix>10) {
         /**@type {string} */
         const digits = !number.decimals ? number.ints : number.ints + number.decimals
