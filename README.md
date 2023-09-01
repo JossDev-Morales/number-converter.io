@@ -13,7 +13,7 @@
 [discord-link]:https://discord.com/users/564970023479934977
 ## Description
 
-[Converter][https://www.npmjs.com/package/num-conv-test] of decimal and integer numbers in different bases such as octal, binary, hexadecimal and decimal and bases 
+[Converter](https://www.npmjs.com/package/num-conv-test) of decimal and integer numbers in different bases such as octal, binary, hexadecimal and decimal and bases 
 between 2 and 36 to other number bases, can convert large numbers with decimal format `ints`.` decimals` and large negative numbers, the decimal numbers in other bases will become the same decimal format, that is `ints`.`decimals` on another base, the same with negative numbers using a negative sign for negative numbers, in the positive numbers the sign is eliminated, binary example: `-1010.0101` which results in a decimal base` -10.5`.
 
 ## Quick start
