@@ -11,7 +11,7 @@ class converter {
     #number
     #base
     /**
-     * @constructor A converter betwen numeric bases, under the rules for the bases
+     * @constructor A converter betwen numeric bases, under the rules for the bases, see at https://github.com/JossDev-Morales/Number-converter.io/#number-base-rules
      * @param {string} number A number representation in some numeric base
      * @param {("binary"|"octal"|"decimal"|"hexadecimal"|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'|'10'|'11'|'12'|'13'|'14'|'15'|'16'|'17'|'18'|'19'|'20'|'21'|'22'|'23'|'24'|'25'|'26'|'27'|'28'|'29'|'30'|'31'|'32'|'33'|'34'|'35'|'36')} base A numeric base betwen 2 and 36
      * @see https://github.com/JossDev-Morales/Number-converter.io/ Documentation
@@ -72,7 +72,7 @@ class converter {
         }
     }
     /**
-     * @method toCustomBase This method converts the current number to other base under the rules for the bases, see at www.github.com
+     * @method toCustomBase This method converts the current number to other base under the rules for the bases, see at https://github.com/JossDev-Morales/Number-converter.io/#number-base-rules
      * @see https://github.com/JossDev-Morales/Number-converter.io/#tocustombase toCustomBase Doc
      * @param {string} base The custom base to convert 
      * @returns {string} The numeric representation of the custom base.
@@ -85,7 +85,7 @@ class converter {
         }
     }
     /**
-     * @method fromCustomToCustom An static method to convert from a number in some base to other base under the rules for the bases, see at www.github.com
+     * @method fromCustomToCustom An static method to convert from a number in some base to other base under the rules for the bases, see at https://github.com/JossDev-Morales/Number-converter.io/#number-base-rules
      * @see https://github.com/JossDev-Morales/Number-converter.io/#static-methods fromCustomToCustom Doc
      * @param {{number:string,base:string}} from The representation of an number in a custom base
      * @param {string} to The custom base to convert
