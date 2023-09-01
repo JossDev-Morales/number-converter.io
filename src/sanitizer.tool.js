@@ -16,8 +16,8 @@ function sanitizer(number, radix) {
                     base: '2',
                     sign: binary[0][0],
                     number: {
-                        ints:binary[1].split('.')[0],
-                        decimals:binary[1].split('.')[1]
+                        ints: binary[1].split('.')[0],
+                        decimals: binary[1].split('.')[1]
                     }
                 }
             } else {
@@ -26,8 +26,8 @@ function sanitizer(number, radix) {
                     base: '2',
                     sign: binary[0],
                     number: {
-                        ints:binary[1].join('').split('.')[0],
-                        decimals:binary[1].join('').split('.')[1]
+                        ints: binary[1].join('').split('.')[0],
+                        decimals: binary[1].join('').split('.')[1]
                     }
                 }
             }
@@ -37,8 +37,8 @@ function sanitizer(number, radix) {
                 base: '2',
                 sign: '+',
                 number: {
-                    ints:binary[1].split('.')[0],
-                    decimals:binary[1].split('.')[1]
+                    ints: binary[1].split('.')[0],
+                    decimals: binary[1].split('.')[1]
                 }
             }
         } else {
@@ -47,8 +47,8 @@ function sanitizer(number, radix) {
                 base: '2',
                 sign: binary[0],
                 number: {
-                    ints:binary[1].split('.')[0],
-                    decimals:binary[1].split('.')[1]
+                    ints: binary[1].split('.')[0],
+                    decimals: binary[1].split('.')[1]
                 }
             }
         }
@@ -60,8 +60,8 @@ function sanitizer(number, radix) {
                     base: '8',
                     sign: octal[0][0],
                     number: {
-                        ints:octal[1].split('.')[0],
-                        decimals:octal[1].split('.')[1]
+                        ints: octal[1].split('.')[0],
+                        decimals: octal[1].split('.')[1]
                     }
                 }
             } else {
@@ -70,8 +70,8 @@ function sanitizer(number, radix) {
                     base: '8',
                     sign: octal[0],
                     number: {
-                        ints:octal[1].split('.')[0],
-                        decimals:octal[1].split('.')[1]
+                        ints: octal[1].split('.')[0],
+                        decimals: octal[1].split('.')[1]
                     }
                 }
             }
@@ -81,8 +81,8 @@ function sanitizer(number, radix) {
                 base: '8',
                 sign: '+',
                 number: {
-                    ints:octal[1].split('.')[0],
-                    decimals:octal[1].split('.')[1]
+                    ints: octal[1].split('.')[0],
+                    decimals: octal[1].split('.')[1]
                 }
             }
         } else {
@@ -91,19 +91,41 @@ function sanitizer(number, radix) {
                 base: '8',
                 sign: octal[0],
                 number: {
-                    ints:octal[1].split('.')[0],
-                    decimals:octal[1].split('.')[1]
+                    ints: octal[1].split('.')[0],
+                    decimals: octal[1].split('.')[1]
                 }
             }
         }
     } else if (base === 'decimal' || base === '10') {
         if (number[0] === '-') {
+            if (number[1] === '0' && number[2] === 'd' || number[1] === '0' && number[2] === 'D') {
+                const decimal = number[2] === 'd' ? number.split('d') : number.split('D')
+                return {
+                    base: '10',
+                    sign: decimal[0][0],
+                    number: {
+                        ints: decimal[1].slice(1).split('.')[0],
+                        decimals: decimal[1].slice(1).split('.')[1]
+                    }
+                }
+            } else {
+                return {
+                    base: '10',
+                    sign: number[0],
+                    number: {
+                        ints: number.slice(1).split('.')[0],
+                        decimals: number.slice(1).split('.')[1]
+                    }
+                }
+            }
+        } else if (number[0] === '0' && number[1] === 'd' || number[0] === '0' && number[1] === 'D') {
+            const decimal = number[1] === 'd' ? number.split('d') : number.split('D')
             return {
                 base: '10',
-                sign: number[0],
+                sign: '+',
                 number: {
-                    ints: number.slice(1).split('.')[0],
-                    decimals: number.slice(1).split('.')[1] 
+                    ints: decimal[1].split('.')[0],
+                    decimals: decimal[1].split('.')[1]
                 }
             }
         } else {
@@ -112,7 +134,7 @@ function sanitizer(number, radix) {
                 sign: '+',
                 number: {
                     ints: number.split('.')[0],
-                    decimals: number.split('.')[1] 
+                    decimals: number.split('.')[1]
                 }
             }
         }
@@ -124,8 +146,8 @@ function sanitizer(number, radix) {
                     base: '16',
                     sign: hexadecimal[0][0],
                     number: {
-                        ints:hexadecimal[1].split('.')[0],
-                        decimals:hexadecimal[1].split('.')[1]
+                        ints: hexadecimal[1].split('.')[0],
+                        decimals: hexadecimal[1].split('.')[1]
                     }
                 }
             } else {
@@ -134,8 +156,8 @@ function sanitizer(number, radix) {
                     base: '16',
                     sign: hexadecimal[0],
                     number: {
-                        ints:hexadecimal[1].split('.')[0],
-                        decimals:hexadecimal[1].split('.')[1]
+                        ints: hexadecimal[1].split('.')[0],
+                        decimals: hexadecimal[1].split('.')[1]
                     }
                 }
             }
@@ -145,8 +167,8 @@ function sanitizer(number, radix) {
                 base: '16',
                 sign: '+',
                 number: {
-                    ints:hexadecimal[1].split('.')[0],
-                    decimals:hexadecimal[1].split('.')[1]
+                    ints: hexadecimal[1].split('.')[0],
+                    decimals: hexadecimal[1].split('.')[1]
                 }
             }
         } else {
@@ -155,32 +177,32 @@ function sanitizer(number, radix) {
                 base: '16',
                 sign: hexadecimal[0],
                 number: {
-                    ints:hexadecimal[1].split('.')[0],
-                    decimals:hexadecimal[1].split('.')[1]
+                    ints: hexadecimal[1].split('.')[0],
+                    decimals: hexadecimal[1].split('.')[1]
                 }
             }
         }
-    }else {
+    } else {
         if (number[0] === '-') {
-           const customNumber=[number[0],number.slice(1)]
-           return {
-                base:base,
-                sign:customNumber[0],
-                number:{
-                    ints:customNumber[1].split('.')[0],
-                    decimals:customNumber[1].split('.')[1]
+            const customNumber = [number[0], number.slice(1)]
+            return {
+                base: base,
+                sign: customNumber[0],
+                number: {
+                    ints: customNumber[1].split('.')[0],
+                    decimals: customNumber[1].split('.')[1]
                 }
-           }
+            }
         } else {
             return {
                 base: base,
                 sign: '+',
                 number: {
-                    ints:number.split('.')[0],
-                    decimals:number.split('.')[1]
+                    ints: number.split('.')[0],
+                    decimals: number.split('.')[1]
                 }
             }
-        } 
+        }
     }
 }
 module.exports = sanitizer
