@@ -6,17 +6,19 @@
  * @returns {string} The representation of the number converted to the numeric base
  */
 function decimalToBase(decimal, radix) {
+  let number = BigInt(decimal);
+  let bigRadix = BigInt(radix);
   let result = "";
-  while (decimal > 0) {
-    let remainder = decimal % radix;
-    if (remainder < 10) {
-      result = remainder + result;
+  while (number > 0n) {
+    let remainder = number % bigRadix;
+    if (remainder < 10n) {
+      result = remainder.toString() + result;
     } else {
-      result = String.fromCharCode(65 + remainder - 10) + result;
+      result = String.fromCharCode(65 + Number(remainder.toString()) - 10) + result;
     }
-    decimal = Math.floor(decimal / radix);
+    number = number / bigRadix; // Realizamos la división sin redondeo
   }
 
   return result || "0";
-}
+}                          
 module.exports=decimalToBase

@@ -1,3 +1,6 @@
+const add = require("./math.tools/add.tool")
+const pow = require("./math.tools/pow.tool")
+
 /**
  * Convert a number in some base betwen 1 and 36 to a decimal number, under the rules for bases, see at https://github.com/JossDev-Morales/Number-converter.io/#number-base-rules
  * @param {string} number The number representation
@@ -6,20 +9,20 @@
  * @returns {string} The number in decimal base
  */
 function baseToDecimal(number, radix) {
-    let result=0n
+    let result=0
     const digits=String(number).split('').reverse()
     const values= digits.map((digit,i)=>{
         const position=i
         const base=radix
         if (isNaN(digit)) {
-            return (digit.toUpperCase().charCodeAt(0)-55) * Math.pow(base,position)
+            return BigInt((digit.toUpperCase().charCodeAt(0)-55)) * BigInt(Math.pow(base,position))
         }else{
-            return digit * Math.pow(base,position)
+            return BigInt(digit) * BigInt(pow(base,position))
         }
     }).reverse()
     values.forEach(value=>{
-        result=BigInt(value)+BigInt(result)
+        result=add(value.toString(),result)
     })
-    return result.toString()
-}
+    return result
+}                          
 module.exports = baseToDecimal
