@@ -110,7 +110,8 @@ class converter {
   static fromCustomToCustom(from, to) {
     const fromNumber = sanitizer(from.number, from.base);
     if (!fromNumber.number.decimals) {
-      return fromNumber.sign === '-' ? fromNumber.sign : '' + decimalToBase(baseToDecimal(fromNumber.number.ints, from.base), to);
+      const decimal = baseToDecimal(fromNumber.number.ints, from.base);
+      return fromNumber.sign === '-' ? fromNumber.sign : '' + decimalToBase(decimal, to);
     } else {
       return "".concat(fromNumber.sign === '-' ? fromNumber.sign : '').concat(decimalToBase(baseToDecimal(fromNumber.number.ints, from.base), to), ".").concat(decimalToBase(baseToDecimal(fromNumber.number.decimals, from.base), to));
     }
