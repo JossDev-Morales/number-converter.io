@@ -11,14 +11,14 @@ function decimalToBase(decimal, radix) {
   let result = "";
   while (number > 0n) {
     let remainder = number % bigRadix;
-    if (remainder < 10n) {
-      result = remainder.toString() + result;
+    if (remainder >= 10n) {
+      result = String.fromCharCode(65 + Number(remainder.toString()) - 10) + result;  
     } else {
-      result = String.fromCharCode(65 + Number(remainder.toString()) - 10) + result;
+      result = remainder.toString() + result;
     }
     number = number / bigRadix; // Realizamos la división sin redondeo
   }
 
   return result || "0";
-}                          
+}
 module.exports=decimalToBase

@@ -15,7 +15,7 @@ function baseToDecimal(number, radix) {
         const position=i
         const base=radix
         if (isNaN(digit)) {
-            return BigInt((digit.toUpperCase().charCodeAt(0)-55)) * BigInt(Math.pow(base,position))
+            return BigInt(digit.toUpperCase().charCodeAt(0)-55) * BigInt(pow(base,position))
         }else{
             return BigInt(digit) * BigInt(pow(base,position))
         }
@@ -24,5 +24,5 @@ function baseToDecimal(number, radix) {
         result=add(value.toString(),result)
     })
     return result
-}                          
+}      
 module.exports = baseToDecimal
