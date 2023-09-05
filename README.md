@@ -1,4 +1,4 @@
-# **Number-converter.io** [!['npm link'][npm-img]][npm-link]  !['downloads'][downloads]  [!['license'][license-img]][license-link]  
+# **Number-converter.io** [!['npm link'][npm-img]][npm-link]  !['downloads'][downloads]  [!['license'][license-img]][license-link]  [![Build Status](https://travis-ci.com/JossDev-Morales/Number-converter.io.svg?branch=main)](https://travis-ci.com/JossDev-Morales/Number-converter.io)
 
 [!['repository'][git-img]][git-link] [!['discord'][discord-img]][discord-link]
 
