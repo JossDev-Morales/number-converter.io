@@ -2,7 +2,7 @@
 
 [!['repository'][git-img]][git-link] [!['discord'][discord-img]][discord-link]
 
-[npm-img]: https://img.shields.io/badge/npm-v1.0.0-23cb0000?style=for-the-badge&logo=npm
+[npm-img]: https://img.shields.io/badge/npm-v1.0.0-%23cb0000?style=for-the-badge&logo=npm
 [npm-link]: https://www.npmjs.com/package/number-converter.io
 [downloads]:https://img.shields.io/npm/dt/bignumber.io?style=for-the-badge&logo=npm&color=%23cb0000
 [license-link]:''
