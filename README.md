@@ -149,7 +149,7 @@ The numerical bases in this library generally work based on the same behavior, t
 Let's first see some things before starting to see the behavior of the number bases.
 
 **most popular number bases**
-- `2` or `binario`
+- `2` or `binary`
 - `8` or `octal`
 - `10` or `decimal`
 - `16` or `hexadecimal`
@@ -159,7 +159,7 @@ The allowed number bases go from base 2 to base 36, from base 9, that is, base 1
 
 **nicknames for popular bases**
 Popular bases have a nickname:
-- `binario`
+- `binary`
 - `octal`
 - `decimal`
 - `hexadecimal`
@@ -188,7 +188,7 @@ Popular bases have specific markings that identify the base directly in the numb
 It cannot be differentiated between some numbers in different bases, for example an octal number and decimal numbers with digits less than 7 or binary that resemble octal or decimal numbers with 0 and 1 such as 101 or 1000, so it is important to specify the base and not leave it to ambiguity.
 
 ## Bignumber.io
-If you want a fast and full npm or git package to handle big numbers in decimal or integer type for javascript, [`bignumber.io`](https://www.npmjs.com/package/bignumber.io) its your best option, this tool have `number-converter.io` integrated, so check the documentation [**here**](https://github.com/JossDev-Morales/Number-converter.io#readme)
+If you want a fast and full npm or git package to handle big numbers in decimal or integer type for javascript, [`bignumber.io`](https://www.npmjs.com/package/bignumber.io) its your best option, this tool have `number-converter.io` integrated, so check the documentation [**here.**](https://github.com/JossDev-Morales/Number-converter.io#readme)
 
 ## License
 
