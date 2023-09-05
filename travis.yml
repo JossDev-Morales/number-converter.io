@@ -4,6 +4,8 @@ node_js:
   - "14"
 install:
   - npm install
+build:
+  - npm run build 
 script:
   - npm test
   - npm run build
