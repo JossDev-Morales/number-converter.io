@@ -187,6 +187,9 @@ Popular bases have specific markings that identify the base directly in the numb
 
 It cannot be differentiated between some numbers in different bases, for example an octal number and decimal numbers with digits less than 7 or binary that resemble octal or decimal numbers with 0 and 1 such as 101 or 1000, so it is important to specify the base and not leave it to ambiguity.
 
+## Bignumber.io
+If you want a fast and full npm or git package to handle big numbers in decimal or integer type for javascript, [`bignumber.io`](https://www.npmjs.com/package/bignumber.io) its your best option, this tool have `number-converter.io` integrated, so check the documentation [**here**](https://github.com/JossDev-Morales/Number-converter.io#readme)
+
 ## License
 
 **Number-converter.io** is [**MIT** licensed](https://github.com/JossDev-Morales/Number-converter.io/blob/main/LICENSE)
