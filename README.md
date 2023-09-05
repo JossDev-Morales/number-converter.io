@@ -1,5 +1,4 @@
-# **Number-converter.io** [!['npm link'][npm-img]][npm-link]  !['downloads'][downloads]  [!['license'][license-img]][license-link]  [![Build Status](https://img.shields.io/travis/com/JossDev-Morales/Number-converter.io?style=for-the-badge&color=0ed35c&logo=travis&label=BUILD%20%26%20TESTS)](https://app.travis-ci.com/github/JossDev-Morales/Number-converter.io?serverType=git)  [![Coverage Status](https://coveralls.io/repos/github/TU_USUARIO/TU_REPO/badge.svg?branch=main)](https://coveralls.io/github/JossDev-Morales/Number-converter.io?branch=main)
-
+# **Number-converter.io** [!['npm link'][npm-img]][npm-link]  !['downloads'][downloads]  [!['license'][license-img]][license-link]  [![Build Status](https://img.shields.io/travis/com/JossDev-Morales/Number-converter.io?style=for-the-badge&color=0ed35c&logo=travis&label=BUILD%20%26%20TESTS)](https://app.travis-ci.com/github/JossDev-Morales/Number-converter.io?serverType=git)  
 
 [!['repository'][git-img]][git-link] [!['discord'][discord-img]][discord-link]
 

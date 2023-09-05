@@ -7,5 +7,4 @@ build:
   - npm run build 
 script:
   - npm test
-after_success:
-  - npx coveralls --exclude node_modules
+  - npm run build
