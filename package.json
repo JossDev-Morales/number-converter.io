@@ -38,14 +38,14 @@
     "jest": "^29.6.4"
   },
   "repository": {
-    "url": "https://github.com/JossDev-Morales/Number-converter.io",
+    "url": "https://github.com/JossDev-Morales/number-converter.io",
     "type": "git"
   },
   "bugs": {
     "email": "thejosuescript@gmail.com",
-    "url": "https://github.com/JossDev-Morales/Number-converter.io/issues"
+    "url": "https://github.com/JossDev-Morales/number-converter.io/issues"
   },
-  "homepage": "https://github.com/JossDev-Morales/Number-converter.io#readme",
+  "homepage": "https://github.com/JossDev-Morales/number-converter.io#readme",
   "maintainers": [
     {
       "email": "thejosuescript@gmail.com",

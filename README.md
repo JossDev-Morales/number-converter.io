@@ -1,14 +1,14 @@
-# **Number-converter.io** [!['npm link'][npm-img]][npm-link]  !['downloads'][downloads]  [!['license'][license-img]][license-link]  [![Build Status](https://img.shields.io/travis/com/JossDev-Morales/Number-converter.io?style=for-the-badge&color=0ed35c&logo=travis&label=BUILD%20%26%20TESTS)](https://app.travis-ci.com/github/JossDev-Morales/Number-converter.io?serverType=git)  
+# **Number-converter.io** [!['npm link'][npm-img]][npm-link]  !['downloads'][downloads]  [!['license'][license-img]][license-link]  [![Build Status](https://img.shields.io/travis/com/JossDev-Morales/number-converter.io?style=for-the-badge&color=0ed35c&logo=travis&label=BUILD%20%26%20TESTS)](https://app.travis-ci.com/github/JossDev-Morales/number-converter.io?serverType=git)  
 
 [!['repository'][git-img]][git-link] [!['discord'][discord-img]][discord-link]
 
 [npm-img]: https://img.shields.io/npm/v/number-converter.io?style=for-the-badge&logo=npm&color=%23cb0000
 [npm-link]: https://www.npmjs.com/package/number-converter.io
 [downloads]:https://img.shields.io/npm/dt/number-converter.io?style=for-the-badge&logo=npm&color=%23cb0000
-[license-link]:'https://github.com/JossDev-Morales/Number-converter.io/blob/main/LICENSE'
-[license-img]:https://img.shields.io/github/license/JossDev-Morales/Number-converter.io?style=for-the-badge
+[license-link]:'https://github.com/JossDev-Morales/number-converter.io/blob/main/LICENSE'
+[license-img]:https://img.shields.io/github/license/JossDev-Morales/number-converter.io?style=for-the-badge
 [git-img]:https://img.shields.io/badge/Git--hub-161b22?logo=github&style=social
-[git-link]:https://github.com/JossDev-Morales/Number-converter.io
+[git-link]:https://github.com/JossDev-Morales/number-converter.io
 [discord-img]:https://img.shields.io/badge/Discord-313338?logo=discord&style=social
 [discord-link]:https://discord.com/users/564970023479934977
 ## Description
@@ -188,7 +188,7 @@ Popular bases have specific markings that identify the base directly in the numb
 It cannot be differentiated between some numbers in different bases, for example an octal number and decimal numbers with digits less than 7 or binary that resemble octal or decimal numbers with 0 and 1 such as 101 or 1000, so it is important to specify the base and not leave it to ambiguity.
 
 ## Bignumber.io
-If you want a fast and full npm or git package to handle big numbers in decimal or integer type for javascript, [`bignumber.io`](https://www.npmjs.com/package/bignumber.io) its your best option, this tool have `number-converter.io` integrated, so check the documentation [**here.**](https://github.com/JossDev-Morales/Number-converter.io#readme)
+If you want a fast and full npm or git package to handle big numbers in decimal or integer type for javascript, [`bignumber.io`](https://www.npmjs.com/package/bignumber.io) its your best option, this tool have `number-converter.io` integrated, so check the documentation [**here.**](https://github.com/JossDev-Morales/BigNumbers.io#readme)
 
 ## License
 
