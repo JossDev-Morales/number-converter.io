@@ -78,10 +78,20 @@ class converter {
      * @returns {string} The numeric representation of the custom base.
      */
     toCustomBase(base){
+        let radix
+        if (base==='binary') {
+            radix='2'
+        }else if (base==='octal') {
+            radix='8'
+        }else if (base==='decimal') {
+            radix='10'
+        }else if (base==='hexadecimal') {
+            radix='16'
+        }else {radix=base}
         if (!this.#number.decimals) {
-            return this.composition.sign==='-'?this.composition.sign:''+decimalToBase(this.toDecimal(),base)
+            return this.composition.sign==='-'?this.composition.sign:''+decimalToBase(this.toDecimal(),radix)
         }else{
-            return `${this.composition.sign==='-'?this.composition.sign:''}${decimalToBase(baseToDecimal(this.#number.ints,this.#base),'8')}.${decimalToBase(baseToDecimal(this.#number.decimals,this.#base),'8')}`
+            return `${this.composition.sign==='-'?this.composition.sign:''}${decimalToBase(baseToDecimal(this.#number.ints,this.#base,),radix)}.${decimalToBase(baseToDecimal(this.#number.decimals,this.#base),radix)}`
         }
     }
     /**
