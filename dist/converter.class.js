@@ -95,10 +95,22 @@ class converter {
    * @returns {string} The numeric representation of the custom base.
    */
   toCustomBase(base) {
-    if (!_classPrivateFieldGet(this, _number).decimals) {
-      return this.composition.sign === '-' ? this.composition.sign : '' + decimalToBase(this.toDecimal(), base);
+    let radix;
+    if (base === 'binary') {
+      radix = '2';
+    } else if (base === 'octal') {
+      radix = '8';
+    } else if (base === 'decimal') {
+      radix = '10';
+    } else if (base === 'hexadecimal') {
+      radix = '16';
     } else {
-      return "".concat(this.composition.sign === '-' ? this.composition.sign : '').concat(decimalToBase(baseToDecimal(_classPrivateFieldGet(this, _number).ints, _classPrivateFieldGet(this, _base)), '8'), ".").concat(decimalToBase(baseToDecimal(_classPrivateFieldGet(this, _number).decimals, _classPrivateFieldGet(this, _base)), '8'));
+      radix = base;
+    }
+    if (!_classPrivateFieldGet(this, _number).decimals) {
+      return this.composition.sign === '-' ? this.composition.sign : '' + decimalToBase(this.toDecimal(), radix);
+    } else {
+      return "".concat(this.composition.sign === '-' ? this.composition.sign : '').concat(decimalToBase(baseToDecimal(_classPrivateFieldGet(this, _number).ints, _classPrivateFieldGet(this, _base)), radix), ".").concat(decimalToBase(baseToDecimal(_classPrivateFieldGet(this, _number).decimals, _classPrivateFieldGet(this, _base)), radix));
     }
   }
   /**
