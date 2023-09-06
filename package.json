@@ -52,5 +52,8 @@
       "name": "Josue Eleazar Tejeda Morales",
       "url": "https://github.com/JossDev-Morales?tab=overview"
     }
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
